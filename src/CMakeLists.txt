@@ -11,7 +11,7 @@ set(SRC
     uuid_time.c
 )
 
-add_library(uuid SHARED ${SRC})
+add_library(uuid ${SRC})
 
 install(TARGETS uuid
     RUNTIME DESTINATION lib
