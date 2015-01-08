@@ -26,3 +26,6 @@ Just like any other cmake based project::
     make install
 
 Look into the ``spkg-install`` file for an example.
+
+.. image:: https://travis-ci.org/h0nza/uuid.svg?branch=master
+       :target: https://travis-ci.org/h0nza/uuid

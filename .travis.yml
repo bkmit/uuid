@@ -6,7 +6,7 @@ env:
     - BUILD_METHOD=cmake CMAKE_OPTIONS="-DJANSSON_TEST_WITH_VALGRIND=ON"
     - BUILD_METHOD=autotools
 
-scripts:
+script:
   - if [ "$BUILD_METHOD" = "autotools" ]; then autoreconf -f -i && CFLAGS=-Werror ./configure && make check; fi
   - if [ "$BUILD_METHOD" = "cmake" ];     then mkdir build && cd build && CFLAGS=-fPIC cmake $CMAKE_OPTIONS .. && cmake --build . && ctest --output-on-failure; fi
 
