@@ -11,9 +11,13 @@ set(SRC
     uuid_time.c
 )
 
+<<<<<<< HEAD
 add_library(uuid SHARED ${SRC})
 add_library (uuid_s STATIC ${SRC})
 set_target_properties (uuid_s PROPERTIES OUTPUT_NAME uuid)
+=======
+add_library(uuid ${SRC})
+>>>>>>> 2b9f19336323009832466652d954d2d4907350db
 
 install(TARGETS uuid uuid_s
     RUNTIME DESTINATION lib

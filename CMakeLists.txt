@@ -2,16 +2,13 @@ cmake_minimum_required(VERSION 2.6)
 
 project(uuid)
 
-set(LIBUUID_VERSION 2.15.1)
-
 add_subdirectory(src)
 
-configure_file (
-    ${uuid_SOURCE_DIR}/uuid.pc.in
-    ${uuid_BINARY_DIR}/libuuid.pc
-@ONLY)
+# Options
+option (BUILD_SHARED_LIBS "Build shared libraries." OFF)
 
-install (
-    FILES ${uuid_BINARY_DIR}/libuuid.pc
-    DESTINATION lib/pkgconfig
-)
+set(LIBUUID_VERSION "2.19.0")
+
+configure_file(uuid.pc.cmake uuid.pc @ONLY)
+
+install(FILES uuid.pc DESTINATION lib/pkgconfig)

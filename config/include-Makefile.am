@@ -1,0 +1,2 @@
+AM_CPPFLAGS =
+usrlib_execdir = $(libexec)
