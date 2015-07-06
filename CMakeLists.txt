@@ -11,4 +11,4 @@ set(LIBUUID_VERSION "2.19.0")
 
 configure_file(uuid.pc.cmake uuid.pc @ONLY)
 
-install(FILES uuid.pc DESTINATION lib/pkgconfig)
+install(FILES ${uuid_BINARY_DIR}/uuid.pc DESTINATION lib/pkgconfig)

@@ -1,6 +1,6 @@
 prefix=@CMAKE_INSTALL_PREFIX@
 libdir=${prefix}/lib
-includedir=${prefix}/includedir
+includedir=${prefix}/include
 
 Name: uuid
 Description: Universally unique id library
